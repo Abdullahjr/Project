@@ -1,3 +1,41 @@
+Technology Used
+
+I used Visual Studio Code Editor to write my HTML, CSS, and JavaScript.
+I searched on the internet if I had any proplem with my code.
+
+
+<a href="wireframe.png" alt= "image">WIREFRAME</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ![GA Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
 
 # Project #1: Tic Tac Toe
