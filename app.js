@@ -3,57 +3,56 @@
 function startGame(){
  
     for(i=1;i<=9;i++){
-      clearBox(i);
+      startOver(i);
     }
+
+   function startOver(num){
+     document.getElementById("b"+ num).textContent="";
+   }  
    
-   
-    document.turn = "X";
+    document.player = "X";
     document.winner = null;
     
-    setMessage(document.turn + " get's to start");
+    msg(document.player + " Let's start");
     
   }
-  
-  
-  
-  function setMessage(msg){
-    document.querySelector(".wining").innerText=msg;
-    }
-  
+    
+  function msg(m){
+    document.querySelector(".statement").textContent=m;
+  }
 
   
   function nextMove(box){
     
     if (document.winner !== null){
-      setMessage(document.turn + " WON");
-    } else if (box.innerText === ''){
+      msg(document.player + " WON");
+    } else if (box.textContent === ''){
    
-   box.innerText = document.turn;
+   box.textContent = document.player;
    switchTurn();      
    
    } else {
-     setMessage("Pic another box");  
+     msg("already used");  
      }
     
   }
-  
-  
-  
+
   
   function switchTurn(){
-    if (checkForWinner(document.turn)){
-        setMessage(document.turn +" WON");
-        document.winner= document.turn;
-      } else if (document.turn == "X"){
-      document.turn = "O";
-      setMessage("It's " + document.turn + " 's turn");
+    if (checkForWinner(document.player)){
+        msg(document.player +" WON");
+        document.winner= document.player;
+      } else if (document.player == "X"){
+      document.player = "O";
+      msg("It's " + document.player + " 's turn");
       } else {
-      document.turn = "X";
-      setMessage("It's " + document.turn + " 's turn");
+      document.player = "X";
+      msg("It's " + document.player + " 's turn");
         }
       
   }
   
+
   function checkForWinner(move){
     let result=false;
     
@@ -83,14 +82,20 @@ function startGame(){
     return result;
   }
   
-  
-  
-  function theBox(number){
+   
+  function theBox(num){
     
-    return document.getElementById("b"+ number).innerText;
+    return document.getElementById("b"+ num).textContent;
  
   }
   
-  function clearBox(num){
-    document.getElementById("b"+ num).innerText="";
-  }  
+  function CheckforTie()
+  {
+      for(var i=1;i<10;i++)
+      {
+
+        if(theBox(i)=="")
+         return false;
+      }
+      return true;
+  }

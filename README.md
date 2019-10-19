@@ -1,11 +1,16 @@
-Technology Used
-
-I used Visual Studio Code Editor to write my HTML, CSS, and JavaScript.
-I searched on the internet if I had any proplem with my code.
+<h1>Technology Used</h1>
+<ul>
+<li>I used Visual Studio Code Editor to write my HTML, CSS, and JavaScript.</li>
+<li>I searched on the internet if I had any proplem with my code.</li>
 
 
 <a href="wireframe.png" alt= "image">WIREFRAME</a>
 
+<h1>Tic Tac Toe</h1>
+<p>
+The game is very simple. It is played by two player. Whoever matches the boxes horisontly, verticly, or diagonaly, WINS! 
+
+<h1>Futu
 
 
 
