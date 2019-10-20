@@ -1,13 +1,11 @@
-
-
 function startGame(){
- 
+
     for(i=1;i<=9;i++){
       startOver(i);
     }
 
    function startOver(num){
-     document.getElementById("b"+ num).textContent="";
+     document.getElementById("b" + num).textContent="";
    }  
    
     document.player = "X";
@@ -44,26 +42,26 @@ function startGame(){
         document.winner= document.player;
       } else if (document.player == "X"){
       document.player = "O";
-      msg("It's " + document.player + " 's turn");
+      msg("It's " + "O" + " 's turn");
       } else {
       document.player = "X";
-      msg("It's " + document.player + " 's turn");
+      msg("It's " + "X" + " 's turn");
         }
       
   }
   
 
-  function checkForWinner(move){
+  function checkForWinner(next){
     let result=false;
     
-    if (check(1,2,3, move)||
-        check(4,5,6, move)||
-        check(7,8,9, move)||
-        check(1,4,7, move)||
-        check(2,5,8, move)||
-        check(3,6,9, move)||
-        check(1,5,9, move)||
-        check(3,5,7, move)){
+    if (check(1,2,3, next)||
+        check(4,5,6, next)||
+        check(7,8,9, next)||
+        check(1,4,7, next)||
+        check(2,5,8, next)||
+        check(3,6,9, next)||
+        check(1,5,9, next)||
+        check(3,5,7, next)){
          
          result=true;
         }       
@@ -73,9 +71,9 @@ function startGame(){
   }
   
   
-  function check(a, b, c, move){
+  function check(a, b, c, next){
     let result = false;
-    if (theBox(a) == move && theBox(b) == move && theBox(c) == move){
+    if (theBox(a) == next && theBox(b) == next && theBox(c) == next){
          result = true;
         }
     
@@ -85,13 +83,13 @@ function startGame(){
    
   function theBox(num){
     
-    return document.getElementById("b"+ num).textContent;
+    return document.getElementById("b"+num).textContent;
  
   }
   
   function CheckforTie()
   {
-      for(var i=1;i<10;i++)
+      for(let i=1;i<10;i++)
       {
 
         if(theBox(i)=="")
