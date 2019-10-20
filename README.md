@@ -15,7 +15,7 @@ The game will feature an AI player.<br>
 The game will have an audio affect><br>
 The design of the game will be more advanced.<br>
 </p>
-<h1>Unsolved Problems<h1>
+<h1>Unsolved Problems</h1>
 <p>
 I could not solve for tie if neither of the players won.
 I will resech more and try to solve it.</p>
